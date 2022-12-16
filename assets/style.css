@@ -1,0 +1,113 @@
+/* All the CSS variables */
+:root {
+	/* COLORS */
+	--color1: #2F4858;
+	--color2: #33658A;
+	--color3: #86BBD8;
+	--color4: #F6AE2D;
+	--color5: #F26419;
+
+	--card-border-color: var(--color3);
+	--background-color: var(--color1);
+	--grey-font-color: var(--color3);
+	--colored-font-color: var(--color4);
+	--code-block-background-color: var(--color4);
+	--code-font-color: black;
+	/* OTHER STUFF */
+	--banner-text-alignment: center;
+	--card-border-width: 2px;
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+}
+
+/* These are the banners at the top and bottom of the page */
+header h1 {
+	text-align: var(--banner-text-alignment);
+	color: var(--colored-font-color);
+}
+header p {
+	text-align: var(--banner-text-alignment);
+	color: var(--grey-font-color);
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer h2 {
+	text-align: var(--banner-text-alignment);
+	color: var(--colored-font-color);
+}
+
+/* This is the main list that contains all the CSS cards */
+main {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+main ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: stretch;
+}
+main ul li {
+	padding: 0;
+	margin: 0;
+	flex: 0 0 33%;
+	margin-top: 3em;
+}
+main ul li section {
+	height: 100%;
+}
+
+/* This is the CSS card */
+.card {
+	border: var(--card-border-width) dashed var(--card-border-color);
+	padding: 1em;
+	padding-top: 0;
+	margin: 0;
+}
+.card h3 {
+	border: var(--card-border-width) solid var(--card-border-color);
+	color: var(--colored-font-color);
+	background-color: var(--background-color);
+	border-radius: 0.5em;
+	padding: 0.5em 1em 0.3em 1em;
+	position: relative;
+	margin-top: -1.1em;
+}
+.card p {
+	color: var(--colored-font-color);
+}
+/* The following was yoiked from https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+.card pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+	margin: 0;
+}
+.card code {
+	display: block;
+	border-radius: 1em;
+	color: var(--code-font-color);
+	background-image: linear-gradient(180deg, var(--code-block-background-color), var(--color5));
+	overflow-wrap:break-word ;
+	padding: 0.3em 1em;
+	height: 100%;
+	width: 100%;
+}
+
