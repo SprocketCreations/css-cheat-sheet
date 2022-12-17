@@ -60,11 +60,12 @@ main ul {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: stretch;
+	column-gap: 1em;
 }
 main ul li {
 	padding: 0;
 	margin: 0;
-	flex: 0 0 33%;
+	flex: 1 1 30%;
 	margin-top: 3em;
 }
 main ul li section {
@@ -77,6 +78,8 @@ main ul li section {
 	padding: 1em;
 	padding-top: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 .card h3 {
 	border: var(--card-border-width) solid var(--card-border-color);
@@ -99,6 +102,7 @@ main ul li section {
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 
 	margin: 0;
+	flex-grow: 1;
 }
 .card code {
 	display: block;
